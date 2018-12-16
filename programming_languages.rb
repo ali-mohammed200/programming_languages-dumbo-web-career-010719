@@ -4,7 +4,7 @@ def reformat_languages(languages)
   languages.each {|styleName, langsObj|
     langsObj.each {|lang, itsDescripObj|
       new_hash[lang] = itsDescripObj
-      keysofHash = new_hash[lang].values
+      keysofHash = new_hash[lang].keys
       binding.pry
       if keysofHash.include?(:style)
         new_hash[lang][:style].push(styleName)
