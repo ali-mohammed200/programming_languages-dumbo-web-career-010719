@@ -4,7 +4,10 @@ def reformat_languages(languages)
   languages.each {|styleName, langsObj|
     langsObj.each {|lang, itsDescripObj|
       new_hash[lang] = itsDescripObj
-      #new_hash[lang][:style] = []
+      if new_hash[lang][:style] == nil
+        new_hash[lang][:style] = []
+      end
+
       new_hash[lang][:style].push(styleName)
     }
 
