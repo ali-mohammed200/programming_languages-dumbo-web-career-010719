@@ -7,11 +7,11 @@ def reformat_languages(languages)
       keysofHash = new_hash[lang].keys
       if keysofHash.include?(:style)
         new_hash[lang][:style].push(styleName)
-      else 
+      else
         new_hash[lang][:style] = []
       end
 
-      
+
     }
 
   }
